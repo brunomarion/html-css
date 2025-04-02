@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pai e Filho</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        div:hover{
+            color: red;
+        }
+
+        div > p{
+            display: none; /*Esse formato com o uso do colchete angular (>) serve para dizer o que você quer fazer com o elemento filho da classe pai (div), neste caso. NO CASO O PARÁGRAFO DENTRO DA DIV FOI OCULTADO DEVIDO O USO DO DISPLAY NONE*/
+        }
+
+        div:hover > p{
+            display: block; /*Já aqui estamos fazendo com que quando colocado o mouse encima da tag div(pai) o parágrafo dentro dele a tag p(filho), apareça com a frase, devido o USO DO DISPLAY BLOCK*/
+            color: white;
+            background-color: red;
+            width: 160px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Classes pai e filho (Exemplo de Hover)</h1>
+    <p>Passe o mouse na frase abaixo:</p>
+    <div>
+        Passe o mouse aqui
+        <p>FRASE ESCONDIDA!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses</title>
+    <style>
+
+        body{
+            font-family: sans-serif;
+        }
+
+        div{
+            display: inline-block;
+            background-color: red;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        div:hover{
+            box-shadow: 5px 5px 5px rgba(70, 65, 65, 0.11);
+        }
+
+        div#d1:hover{
+            background-color: blue; /*PSEUDO-CLASSE SERVE PARA ATRIBUIR UM ESTADO A UMA CLASSE, NESSE CASO FOI ATRIBUIDO A DIV COM O ID #1, O BACKGROUND-COLOR BLUE COM O ESTADO HOVER*/
+        }
+        div#d2:hover{ 
+            background-color: yellow; /*PSEUDO-CLASSE SERVE PARA ATRIBUIR UM ESTADO A UMA CLASSE, NESSE CASO FOI ATRIBUIDO A DIV COM O ID #2, O BACKGROUND-COLOR YELLOW COM O ESTADO HOVER*/
+        }
+        div#d3:hover{
+            background-color: gray; /*PSEUDO-CLASSE SERVE PARA ATRIBUIR UM ESTADO A UMA CLASSE, NESSE CASO FOI ATRIBUIDO A DIV COM O ID #2, O BACKGROUND-COLOR GRAY COM O ESTADO HOVER*/
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags </title>
+    <style>
+        body{
+            background-color: rgb(207, 205, 205);
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        header{
+            padding: 10px;
+            margin: 10px;
+            background-color: rgba(115, 116, 118, 0.699);
+        }
+
+        nav{
+            background-color: rgb(84, 83, 83);
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.666);
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: white;
+            padding: 0px 15px;
+            font-size: bolder;
+        }
+
+        nav > a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+
+        main{
+            margin: 10px;
+        }
+
+        section > article{
+            padding: 5px;
+            text-align: justify;
+            border-radius: 5px 12px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.655);
+        }
+
+        article > h2{
+            text-align: center;
+        }
+
+        main > section > article{
+            background-color: rgba(130, 130, 130, 0.852);
+        }
+        article > aside{
+            margin: 0;
+        }
+
+        article > aside > p{
+            background-color: rgb(99, 98, 98);
+            color: white;
+            padding: 2px;
+            text-align: right;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        footer{
+            background-color: rgba(0, 0, 0, 0.762);
+            text-align: center;
+            color: white;
+            padding: 5px;
+        }
+
+        footer > p{
+            margin: 0;
+        }
+
+        div#bola{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin: 10px;
+            border-radius: 50%; /*Também é possível utilizar porcentagem no border radius*/
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.332);
+        }
+
+        #bola > p{
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site utilizando Grouping Tags</h1>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias">
+            <article>
+                <h2>Aumento de queimadas no Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aliquam voluptates totam exercitationem reprehenderit hic quod quam maxime, harum quia laborum ea ex mollitia error incidunt cumque iure nam natus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis blanditiis ab enim itaque commodi, explicabo suscipit adipisci, perspiciatis vitae quas excepturi cum cupiditate natus voluptatum illo quod officia ipsam!</p>
+                <aside>
+                    <p><em>Artigo escrito por Bruno Marion</em></p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Bruno Marion</p>
+    </footer>
+    <h3>Criando uma bola com border radius:</h3>
+    <div id="bola">
+        <p>A</p>
+    </div>
+    
+</body>
+</html>

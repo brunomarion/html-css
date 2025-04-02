@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    /*height: 100%;*/
+}
+main{
+    background-color: white;
+    width: 760px;
+    padding: 12px; /*espaço do conteúdo dentro do main para as bordas*/
+    margin: auto; /*para centralizar o conteúdo*/
+    box-shadow: 10px 10px 10px #2c5473a9; /*para criar uma sombra (box-shadow: (sombra para direita), (sombra para baixo), (tamanho da sombra) e a (cor da sombra))*/
+    border-radius: 8px; /*para deixar as bordas da box mais arredondadas*/
+}
+
+body{
+    text-align: justify; /*para alinhar o texto de acordo com o tamanho da janela/espaço inserido*/
+    background-image: linear-gradient(to right, #4A96CF, #417dab); /*inserindo gradiente de fundo da página*/
+}
+
+h1{
+    color: #4A96CF;
+    text-align: center; /*para centralizar o título (h1)*/
+    text-shadow: 1px 1px 2px #295271e2; /*assim como o box-shadow, mesmo parâmetros, mas para o texto*/
+}
+
+h2{
+    color: #546A7A;
+}

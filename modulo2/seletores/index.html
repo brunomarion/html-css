@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lumanosimo&family=Patrick+Hand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lumanosimo&family=Mate+SC&family=Patrick+Hand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            background-color: rgba(5, 130, 5, 0.408);
+            
+        }
+
+        h1{
+            font-family: "Mate SC", serif;
+            font-weight: bold;
+        }
+
+        p{
+            font: normal normal 16px Sans-serif;
+            text-align: justify;
+        }
+
+        h1#principal{ /* O # em css serve para criar um ID para tal elemento, neste caso estou modificando somente o h1 que tem o id principal*/
+            font: normal bold 38px "Lumanosimo", cursive;
+            text-align: center;
+            background-color: rgba(5, 130, 5, 0.408); 
+            color: white;
+        }
+
+        .basico{
+            background-color: white;
+        }
+
+        .intermediario{
+            background-color: rgba(255, 0, 0, 0.312);
+        }
+
+        .avancado{
+            background-color: rgba(1, 75, 75, 0.496);
+        }
+
+        .destaque{
+            background-color: rgba(125, 125, 3, 0.751);
+        }
+
+        /*É POSSÍVEL UM ELEMENTO HTML POSSUIR VÁRIAS CLASSES (INCLUSIVE COM ID JUNTO, MAS O ID SE SOBRESAI PERANTE A CLASS), BASTA COLOCA-LAS JUNTAS SEPARADAS POR ESPAÇO ! MAS O ID SÓ PODE ESTAR EM 1 ELEMENTO*/
+    </style>
+</head>
+<body>
+    <h1 id="principal">APRENDENDO HTML5 E CSS3</h1>
+    <h1>APRENDENDO HTML</h1>
+    <h2 class="basico">HTML Básico</h2>
+    <p><span class="destaque">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Nam, error. Rerum reprehenderit id, sed provident qui eos impedit veniam debitis facere porro sequi ut commodi unde officiis esse natus aperiam?</p>
+    <h2 class="intermediario">HTML Intermediário</h2>
+    <p><span class="destaque">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Mollitia delectus, esse recusandae consequuntur voluptatibus eum eius at numquam saepe dignissimos nemo aperiam exercitationem perferendis inventore nesciunt veniam, provident suscipit tempora.</p>
+    <h2 class="avancado">HTML Avançado</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates odit inventore enim, eum architecto vel placeat aut. Quasi repellendus nostrum ad, animi alias sit illo dicta ab tempore officia ullam?</p>
+    <br>
+    <h1>APRENDENDO CSS</h1>
+    <h2 class="basico">CSS Básico</h2>
+    <p><span class="destaque">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Asperiores vero adipisci, voluptates sequi odit blanditiis. Accusamus eligendi ad facere quas. Dolorem beatae deserunt illo pariatur nesciunt fugit ea voluptatem magnam.</p>
+    <h2 class="intermediario">CSS Intermediário</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eius sed hic est optio dolore illum! Quae facilis quos voluptates repellendus expedita asperiores. Quibusdam numquam hic rem doloremque, iste quod.</p>
+    <h2 class="avancado">CSS Avançado</h2>
+    <p><span class="destaque">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Vitae quod fugiat consequatur nisi exercitationem aut maxime voluptatem error tempore veritatis, magni doloribus soluta eos praesentium. Cumque laboriosam rem est nobis!</p>
+</body>
+</html>

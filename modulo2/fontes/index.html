@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <style>
+        /* ESTAS SÃO FORMAS DE IMPORTAR FONTES DO GOOGLE.FONTES, INCORPORANDO O LINK DELAS LOGO NO INÍCIO DO CÓDIGO CSS (FORA DE UM SELETOR), COM AS CARACTERISTICAS DISPONÍVEIS DAS FONTES, COMO FONT-STYLE OU FONT-WEIGHT: */
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        /*ESTES CÓDIGOS COM INÍCIO EM @ SÃO CHAMADOS DE REGRAS DAS CSS*/
+
+        /*Este formato @font-face serve para colocar uma fonte baixada no seu pc*/
+        @font-face {
+            font-family: 'fontebaixada';
+            src: url('fontes/fonte01.ttf') format('truetype');
+
+            /*Tipos de formatos de fontes:
+            --> opentype (otf)
+            --> truetype (ttf)
+            --> embedded-opentype
+            --> truetype-aat (Apple Advanced Typography)
+            --> svg
+            */
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: normal normal 1em "Work Sans", sans-serif; 
+            /*Esta forma de declarar fontes é chamado de ShortHand (simplificando o código de 4 declarações, NESTA ORDEM:
+
+            font-style: normal/italic
+            font-weight: lighter, normal, bold, bolder (0 ---> 900)
+            font-size: 16px = 1em (padrão do navegador = 1em)
+            font-family: (categorias = serifadas, não serifadas, monoespaçadas, handwriting, display)
+            
+            */
+            background-image: linear-gradient(to right, #4c6c8eb7, rgba(34, 49, 63, 0.653));
+        }
+
+        h1{
+            font: normal bold 2.8em "Patrick Hand", cursive;
+        }
+
+        h2{
+            font-family: "fontebaixada";
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            text-align: justify;
+            border-radius: 10px;
+            width: 700px;
+            height: 680px;
+            box-shadow: 8px 8px 10px #10171e66;
+        }
+
+        main h1{
+            text-align: center;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Categorias de Fontes</h1>
+        <h2>Tipos de fontes:</h2>
+        <p>
+            <ul type="Circle">
+                <li>Serifadas</li>
+                <li>Sans-Serif (não serifadas)</li>
+                <li>Monoespaçada</li>
+                <li>Display</li>
+                <li>HandWriting</li>
+            </ul>
+        </p>
+        <h2>Tipos de medidas de fontes:</h2>
+            <ul>
+                <li><ins>Medidas Absolutas:</ins></li>
+                <ul type="square">
+                    <li><strong>cm, mm, in, px, pt, pc</strong></li>
+                </ul>
+                <br>
+                <li><ins>Medidas Relativas:</ins></li>
+                <ul>
+                    <li><strong>em, ex, rem, vw, vh, %</strong></li>
+                </ul>
+            </ul>
+        <p>As medidas mais usadas são px(pixels) e em(relativo), onde <strong>16px é o tamanho de fonte padrão do navegador</strong></p>
+        <p><strong>16px = 1em (geralmente)</strong></p>
+        <p>Para usar fontes incorporadas da internet recomenda-se o: <a href="https://fonts.google.com/" target="_blank" rel="external">google.fonts.com</a></p>
+        <p>Para usar fontes baixadas da internet existem vários sites mas um deles é o: <a href="https://www.dafont.com/pt/" target="_blank" rel="external">dafont.com</a></p>
+        <p>Para extrair fontes usadas em imagens, sites indicados são: <a href="https://www.whatfontis.com/">https://www.whatfontis.com/</a>, <a href="https://www.fontsquirrel.com/">https://www.fontsquirrel.com/</a>, <a href="https://www.myfonts.com/">https://www.myfonts.com/</a>
+    </main>
+</body>
+</html>

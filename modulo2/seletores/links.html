@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /*
+             # =  ID
+             . =  CLASS
+             : =  PSEUDO-CLASS
+            :: =  PSEUDO-ELEMENT
+            >  =  CHILDREN
+        
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: black;
+            text-decoration: none;  /*AQUI FEZ COM QUE TODOS OS LINKS TIVESSEM A COR DA LETRA PRETA, SEM SUBLINHAR E EM NEGRITO*/
+            font-weight: bold;
+        }
+
+        a:visited{
+            color:red; /*AQUI FEZ COM QUE OS LINKS JA VISITADOS TENHAM A COR VERMELHA, DEVIDO A (PSEUDO-CLASSE: VISITED)*/
+        }
+
+        a:hover{
+            text-decoration: underline; /*AQUI FEZ COM QUE QUANDO PASSADO O MOUSE ENCIMA DO LINK (HOVER) ELE FIQUE SUBLINHADO E TENHA A COR PRETA*/
+            color: black;
+        }
+
+        a::after{ /*O PSEUDO ELEMENTO (::AFTER) FAZ COM QUE VOCÊ MODIFIQUE ELEMENTOS HTML DEPOIS DELE, NESSE CASO COLOCAMOS A PALAVRA 'LINK' DEPOIS DE TODOS O LINKS*/
+            content: ' [link]';
+            color: rgba(148, 146, 146, 0.825);
+            text-decoration: none;                  
+            font-weight: lighter;
+            color: rgba(242, 80, 80, 0.4);
+        }
+
+        a::before{ /*O PSEUDO ELEMENTO (::BEFORE) FAZ COM QUE VOCÊ MODIFIQUE ELEMENTOS HTML DEPOIS DELE, NESSE CASO COLOCAMOS UM SÍMBOLO ANTES DOS LINKS*/
+            content: '☑ ';
+        }
+
+        .especial{
+            background-color: rgba(255, 0, 0, 0.389);
+        }
+
+
+        .especial::after{ /*ESSE CASO SERVIU PARA MOSTRAR QUE TAMBÉM PODE-SE USAR PSEUDO-ELEMENTOS EM CLASSES, COMO NESSE CASO A CLASSE 'ESPECIAL'*/
+            content: ' ★★★';
+            font-weight: bolder;
+            color: red;
+        }
+        .especial:hover{
+            color: green;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/@brunomarion2904" target="_blank" rel="next">Canal no Youtube</a></li>
+        <li><a href="https://www.instagram.com/brumarionn/" target="_blank" rel="next" class="especial">Instagram</a></li>
+        <li><a href="https://github.com/brunomarion" target="_blank" rel="next">Repositorio no GitHub</a></li>
+        <li><a href="https://google.com" target="_blank" rel="next">Google</a></li>
+    </ul>
+</body>
+</html>

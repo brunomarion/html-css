@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Usando a tag picture nós podemos inserir uma imagem com tamanho diferente dependendo da tela do dispositivo, da janela do navegador e do tamanho da imagem</p><br>
+    <p><strong>Aqui está um exemplo de uma imagem dinâmica, usando a tag &lt;picture&gt;:</strong></p>
+
+    <picture> <!--Sempre colocar as imagens em ordem de tamanho, senão não irá funcionar, a imagem que abrirá padrão no seu site, será aquela que estiver na tag <img> -->
+        <source media="(max-width: 725px)" srcset="Imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1025px)" srcset="Imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="foto-g.png">
+    </picture>
+
+    <h2>Colocando Áudio no site:</h2>
+    <p>É possível colocar somete utilizando a tag &lt;audio&gt; com o <strong>parâmetro controls:</strong></p>
+    <audio src="audios/um amor real - olga sousa.mp3" controls></audio>
+    <!-- Essa forma de inserção de áudio é um pouco limitado visto que o navegador do usuário pode não reconhecer o formato do arquivo que neste caso é .mp3 -->
+    <p>Mas também é possível e recomendado que utilize a tag <strong>&lt;source&gt; dentro da tag &lt;audio&gt; para maior compatibilidade com o navegador:</strong></p>
+   <audio controls>
+        <source src="audios/um amor real - olga sousa.mp3" type="audio/mpeg"> <!--1º TENTATIVA-->
+        <source src="audios/um amor real - olga sousa.ogg" type="audio/ogg"> <!--2º TENTATIVA-->
+        <source src="audios/um amor real - olga sousa.wav" type="audio/wav"> <!--3º TENTATIVA-->
+        <p>Não foi possível reproduzir o arquivo de audio, caso queria baixar, clique aqui <a href="audios/um amor real - olga sousa.mp3" download="um amor real - olga sousa.mp3" type="application/mp3">um amor real - olga sousa.mp3</a></p> <!--CASO NENHUM FORMATO FUNCIONE-->
+   </audio>
+    <!-- Assim como o uso da tag source para imagens dinâmicas no site o source>src para áudios é recomendade visto que podemos colocar o mesmo audio, em diversos tipos de formatos diferentes, para melhorar a compatibilidade com navegadores diversos. E ainda deixamos uma frase com um link para dowload do arquivo, caso não consiga rodar nenhum dos formatos -->
+
+    <h2>Vídeos</h2>
+    <h3>Existem 2 formas de inserir vídeos em nosso site: <strong>Hospedagem Local</strong> e <strong>Incorporação de vídeos externos</strong></h3>
+    <ul>
+        <li><strong>Hospedagem Local:</strong> inserir vídeos armazenados no nosso próprio servidor, para isso precisamos ter ele em varios formatos (mp4, ogv, m4v, webm...) para maior compatibilidade com navegadores:</li>
+
+        <!--Novamente a forma mais recomendada de inserir midias no nosso site, hospedadas no nosso servidor loval, é por meio da tag (soure:src), inserindo o mesmo arquivo em formatos diferentes para maior compatibilidade-->
+        <video width="500px" poster="Imagens/thumb-video-teste.png" controls autoplay>
+            <source src="videos/video-teste.mp4" type="video/mp4">  <!--1º TENTATIVA-->
+            <source src="videos/video-teste.m4v" type="video/mp4">  <!--2º TENTATIVA-->
+            <source src="videos/video-teste.ogv" type="video/ogv">  <!--3º TENTATIVA-->
+            <source src="videos/video-teste.webm" type="video/webm"> <!--4º TENTATIVA-->
+            <p>Não foi possível reproduzir o video!</p> <!--CASO NENHUM FORMATO FUNCIONE-->
+        </video>
+        <li><strong>Incorporação de vídeos externos:</strong> inserir videos armazenados em outros servidores, hospedados em outros servidores, como o youtube e o vimeo, por exemplo.</strong></li>
+
+        <h3>Inserindo video do Youtube:</h3> <!--Para inserir vídeo do youtube basta compartilhar o video e em incorporação, copiar o código iframe-->
+        <iframe width="500" height="315" src="https://www.youtube.com/embed/IojCD_rGCtI?si=ULcMGDXFykEmN316" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loop></iframe>
+
+        <h3>Inserindo video do Vimeo:</h3> <!--Para inserir vídeo do vimeo basta compartilhar o videoe em incorporação, copiar o código iframe com as configurações que desejar!-->
+        <iframe src="https://player.vimeo.com/video/29315013?h=4a7399cc6d&loop=1&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </ul>
+
+</body>
+</html>

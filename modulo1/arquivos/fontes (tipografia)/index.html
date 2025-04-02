@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <style>
+        body{
+            text-align: justify;
+            font-family: sans-serif, Arial, Helvetica;
+        }
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder; /* lighter, normal, bold, bolder*/
+            font-size: 3em;
+            font-style: italic;
+            /* Se você quiser encurtar essas declarações utiliza-se a shorthand: (font: font-style -> font-weight -> font-size -> fontfamily), NESTA ORDEM! */
+        }
+
+        h2{
+            font: bold 2em arial;
+        }
+        
+        /*
+
+        Medidas Absolutas: cm, mm, in, px, pt, pc.
+        Medidas Relativas: em, ex, rem, vw, vh, %.
+
+        16 px(tamanho padrão do navegador) = 1em
+        UTILIZA-SE SEMPRE PX E EM.
+        */
+    </style>
+</head>
+<body>
+    <h1>Categorias de fontes:</h1>
+    <ul type="circle">
+        <li>Serifadas</li>
+        <li>Sans-serif (sem serifa)</li>
+        <li>Monoespaçada</li>
+        <li>Handwriting</li>
+        <li>Display</li>
+    </ul>
+    <p>Existem as CSS SAFE COMBINATIONS, onde podemos colocar declarar as fontes juntas caso o navegador não consiga ler alguma delas, como esta: <strong>Arial, Helvetica, sans-serif</strong>, onde ela tentará ler cada uma destas.
+    <h2>Testando Fontes</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat id fugiat reprehenderit aut ad, nulla iure rerum voluptatibus beatae ut assumenda consequatur sit voluptas repellat consequuntur! Molestiae eaque reiciendis officiis!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores provident eos officia explicabo voluptatem laudantium magnam unde, fugiat nemo dolor molestias similique vero minima nesciunt ducimus sapiente natus</p>
+</body>
+</html>
