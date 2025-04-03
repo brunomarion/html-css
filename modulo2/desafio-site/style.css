@@ -21,7 +21,7 @@
     --font-baixada: "android";
 }
 
-/*PARA CRIAR CONFIGURAÇÕES GLOBAIS DO NOSSO CSS USA-SE O (*), NESSE CASO RETIRANDO TODAS AS MARGINS E PADDINGS DOS NOSSOS ELEMENTOS HTML*/
+/*PARA CRIAR CONFIGURAÇÕES GLOBAIS DO NOSSO CSS USA-SE O (*), NESSE CASO RETIRANDO TODAS AS MARGINS E PADDINGS DOS NOSSOS ELEMENTOS HTML E ADICIONANDO O SMOOTH NO SCROLL*/
 *{
     margin: 0px;
     padding: 0px;
@@ -71,7 +71,7 @@ nav{
 
 nav a{
     font-family: "Special Elite", system-ui;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     color: white;
     padding: 10px;
@@ -83,7 +83,7 @@ nav a:hover{
     color: black;
     border-radius: 5px;
     padding: 10px;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
 }
 
 article{
