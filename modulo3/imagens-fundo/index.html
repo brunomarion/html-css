@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Imagem de Fundo</title>
+    <style>
+
+        body{
+            background-image: url(imagens/wallpaper001.jpg);
+        }
+
+        div.pai{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            justify-content: space-around;
+        }
+        div.quadrado{
+            display: inline-block;
+            background-color: lightgray;
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            border-radius: 5px;
+        }
+
+        div#q1{
+            background-color: red; /*ESTA É A FORMA PADRÃO DE COLOCAR COR DE FUNDO*/
+        }
+
+        div#q2{
+            background-image: linear-gradient(to bottom, skyblue, blue, rgba(0, 0, 0, 0.742)); /*ESTA É A FORMA PADRÃO DE COLOCAR UMA COR GRADIENTE DE FUNDO USANDO A FUNÇÃO 'LINEAR-GRADIENT' DO BACKGROUND-IMAGE*/
+        }
+
+        div#q3{
+            background-image: url(../imagens-fundo/imagens/pattern001.png); /*ESTA É UA FORMA DE COLOCAR UMA IMAGEM DE FUNDO EM UMA DIV, PORÉM COMO SE PODE PERCEBER, ESSA IMAGEM ORIGINAL É PEQUENA DEMAIS PARA CABER NESTA DIV, ENTÃO PARA PREENCHER TODO O ESPAÇO ELE JUNTOU VÁRIAS DESTA IMAGEM*/
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="quadrado" id="q1">
+
+        </div>
+        <div class="quadrado" id="q2">
+
+        </div>
+        <div class="quadrado" id="q3">
+
+        </div>
+    </div>
+</body>
+</html>
