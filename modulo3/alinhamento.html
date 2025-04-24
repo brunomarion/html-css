@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+
+        h1{
+            text-align: center;
+        }
+
+        #conteiner{
+            position: relative;
+            background-image: url(imagens-fundo/imagens/target001.png);
+            background-size: 100% 100%;
+            height: 88vh;
+            background-color: red;
+            padding: 20px;
+            /*TODO BLOCO JÁ POSSUI POSICIONAMENTO RELATIVO*/
+        }
+
+        #conteudo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            /*
+            O TRANSLATE MOVE UM ELEMENTO NO EIXO CARDIANO SENDO (X, Y), onde o primeiro é para direita (+), esquerda (-), e o segundo é baixo (+) e cima (-)
+
+            */
+            background-image: url(imagens-fundo/imagens/target001.png);
+            background-size: 100% 100%;
+            height: 200px;
+            /*MARGIN: AUTO SO SERVE PARA ALINHAR BLOCOS HORIZONTALMENTE*/
+            width: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>ESTA É UMA DAS FORMAS DE CENTRALIZAR UM CONTEUDO VERTICALMENTE E HORIZONTALMENTE</h1>
+        <section id="conteiner">
+            <article id="conteudo">
+
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
