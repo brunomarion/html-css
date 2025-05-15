@@ -4,12 +4,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Passion+One:wght@400;700;900&display=swap');  
 
+/*DECLARANDO VARIÁVEIS*/
 :root{
     --font-padrao: verdana, sans-serif;
     --font01: "Passion One", sans-serif;
     --font02: "Indie Flower", cursive;
 }
 
+/*CONFIGURAÇÕES GLOBAIS*/
 *{
     margin: 0;
     padding: 0;
@@ -74,6 +76,15 @@ section.imagem1{
     color: white;
 }
 
+section.imagem1 p{
+    text-align: left;
+    padding-left: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    max-width: 750px;
+}
+
 section.imagem2{
     background-image: url('content/imagens/img02.webp');
     background-size: cover;
@@ -82,6 +93,15 @@ section.imagem2{
     background-attachment: fixed;
     background-color: gray;
     color: white;
+}
+
+section.imagem2 p{
+    text-align: left;
+    padding-left: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    max-width: 750px;
 }
 
 footer{
