@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cordel Moderno</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
@@ -95,5 +96,11 @@
     <footer>
         <p>Site criado por <a href="https://github.com/brunomarion" target="_blank" rel="external">Bruno Marion</a> para o <a href="https://www.cursoemvideo.com/#google_vignette" target="_blank" rel="external">Curso em Video.</a></p>
     </footer>
+    <script>
+        window.sr = ScrollReveal({reset: true});
+        sr.reveal('.imagem1', {duration: 1500});
+        sr.reveal('.imagem2', {duration: 2000});
+        sr.reveal('p', {duration: 1500});
+    </script> 
 </body>
 </html>
