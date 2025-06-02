@@ -19,7 +19,6 @@
 
 body{
     min-height: 100vh;
-    background-color: gray;
 }
 
 header{
@@ -32,6 +31,7 @@ header{
     padding: 60px 0;
     background-color: black;
     gap: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.575);
 }
 
 header h1{
@@ -134,3 +134,61 @@ footer p a:hover{
 footer img{
     width: 12px;
 }
+
+
+/*animações para o javascript*/
+
+.slide-in-top-hidden{
+    opacity: 0;
+    transform: translateY(-100%);
+    filter: blur(10px);
+}
+
+.slide-in-top-show{
+    opacity: 1;
+    transition: 1.2s;
+    transform: translateY(0);
+    filter: blur(0px);
+}
+
+.fade{
+    opacity: 0;
+    filter: blur(15px);
+}
+
+.fade-in{
+    opacity: 1;
+    transition: all 1.7s;
+    filter: blur(0px);
+}
+
+.slide-left{
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(15px);
+}
+
+.slide-in-left{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s;
+    filter: blur(0px);
+}
+
+.slide-left-p{
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(15px);
+}
+
+.slide-in-left-p{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s;
+    filter: blur(0px);
+}
+
+
+
+
+
