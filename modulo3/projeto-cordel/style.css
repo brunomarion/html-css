@@ -113,9 +113,11 @@ section.imagem2 p{
 }
 
 footer{
+    font-size: 65%;
     text-align: center;
     padding: 20px;
     font-family: var(--font-padrao);
+    border-top: 2px solid rgba(0, 0, 0, 0.178);
 }
 
 footer p a{
@@ -132,7 +134,7 @@ footer p a:hover{
 }
 
 footer img{
-    width: 12px;
+    width: 8px;
 }
 
 
