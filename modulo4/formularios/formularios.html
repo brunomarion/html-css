@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <h1>O que são formulários?</h1>
+    <p>É um local onde o usuário pode colocar dados.</p>
+    <h2>Segue abaixo o exemplo mais básico de Formulários:</h2>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+            <!--name é bastante útil para o proprio HTML ou PHP, já o ID para javaScript, e para fazer ligação com o LABEL por exemplo.-->
+        </p>
+        <p><label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome">
+            <!--name é bastante útil para o proprio HTML ou PHP, já o ID para javaScript, e para fazer ligação com o LABEL por exemplo.-->
+        </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+     <!--ANOTAÇÕES IMPORTANTES:-->
+
+        <!--Mas para onde vou mandar esses dados? Normalmente mandamos para alguma linguagem de programação, para manipular esses dados, nesse caso o "action" é para onde vai ser direcionado esses dados quando clicado no input "submit", nesse caso será o "cadastro.php".-->
+
+        <!--Mas ainda não há uma ligação entre os textos "nome" e "sobrenome" e os campos de input, para isso se usa o LABEL com o atributo "FOR", colocando o mesmo ID do campo INPUT, para conectá-los-->
+
+        <!--Porém nesse formulário, quanto ao envio desses dados, se enviarmos dessa forma, esses dados serão aparecidos na URL junto ao arquivo direcional, nesse caso, o "cadastro.php", O QUE É UM PADRÃO DO ENVIO DE FORMULÁRIOS. Porém se você quer mudar isso, precisa aprender os métodos de envio de dados POST E GET-->
+    <br>
+    <hr>
+    <h2>EXISTEM DOIS MÉTODOS PARA ENVIO DE FORMULÁRIOS: GET E POST</h2>
+    <p><b>GET:</b> método padrão de envio de dados, aparecendo na URL. Isso deixa explícito na URL do site os dados
+        enviados.</p>
+    <p><b>POST:</b> método de envio de dados, não aparecendo na URL. Isso deixa inplícito os dados enviados, mas não
+        protege os dados por causa disso, dá para encontrar indo nos "headers", do Network no inspecionar do arquivo
+        destino "action".</p><br>
+    <h3><ins>MAS QUANDO USAR CADA UMA?</ins></h2>
+        <p><b>GET</b>:
+        <ul>
+            <li>Normamente usa-se para formulários com envio de dados em campos mais simples, sem ter algo tão
+                importante, como <b>nome, sobrenome, data de nascimento, etc...</b></li>
+            <li>Também usa-se bastante para compartilhamento de URL, como o google pro exemplo, pois os dados de
+                pesquisa ficam na URL.</li>
+            <li>SÓ PODE ENVIAR ATÉ <b>3000 BITS (LIMITE)</b>, o que dá aproximadamento 3000 letras em dados enviados.
+            </li>
+        </ul>
+        </p>
+        <p><b>POST</b>:
+        <ul>
+            <li>Quando se trabalha com campos de dados mais sensíveis para o usuário, <b>como senhas, número de cartão
+                    de crédito, cpf...</b></li>
+            <li>Protege "um pouco" mais o envio desses dados, pois fica implícito e não aparece na URL, por exemplo</li>
+            <li>Se os dados ultrapassarem o limite de <b>3000 BITS (LIMITE)</b></li>
+        </ul>
+        </p>
+        <hr>
+        <h2>APRENDENDO ALGUNS ATRIBUTOS DE INPUT EM FORMULÁRIOS:</h2>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p><label for="iuser">Usuário:</label>
+            <input type="text" name="usuario" id="iuser" required minlength="3" maxlength="15" size="15"
+            placeholder="nome de usuário" autocomplete="username">
+        </p>
+        <p><label for="ipassword">Senha:</label>
+            <input type="password" name="senha" id="ipassword" required minlength="8" maxlength="20" size="8"
+            placeholder="digite sua senha" autocomplete="current-password">
+        </p>
+            <p><input type="submit" value="Enviar"> <input type="reset" value="Limpar"></p>
+
+            <!--"required" torna o campo obrigatório-->
+            <!--"maxlenght" e "minlenght" são atributos para validar de forma simples os dados inserido pelo usuário, determinando a quantidade máxima e mínima exigida nesses campos-->
+            <!--"size" determina o tamanho da caixa para mostrar a quantidade determinada de caracteres-->
+            <!--"placeholder" texto prévio inserido dentro do campo de input-->
+            <!--"autocomplete: ON" decide se vai aparecer sugestões mais comuns ao clicar nos campos ON/OFF, ao usar ON em <FORM>, pode-se usar nos compos de input para facilitar o navegar nas sugestões-->
+
+    </form>
+    <hr>
+    <br>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome-completo">Nome Completo</label>
+            <input type="text" name="nome-completo" id="inome-completo" autocomplete="name" maxlength="30" placeholder="digite seu nome completo" size="30" required>
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" value="5" required>
+        </p>
+        <p>
+            <label for="imes">Mês Referente:</label>
+            <input type="month" name="mes" id="imes" value="2025-06" required>
+        </p>
+        <p>
+            <label for="idia">Dia da Prova:</label>
+            <input type="date" name="data" id="idia">
+        </p>
+        <p>
+            <label for="ihora">Hora da Prova:</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+        <!--input type:"number" aceita somente valores numéricos, com atributos "min" e "max" para limitar os dados preenchidos e o "step" para criar um seletor para aumentar e diminuir o valor digitado pelo quantidade escolhida. Já o "value" é um valor que aparecerá previamente no campo do input (Esse valor substitui o placeholder)-->
+
+        <!--input type: "month" é usado para escolher um mês de um determinado ano. O value nesse formato (ano - mês) para aparecer uma data previamente selecionada no campo no input.-->
+
+        <!--input type: "date" é usado para escolher uma data específica de um calendário (dia-mês-ano)-->
+
+        <!--input type: "time" é usado para escolher uma hora específica de um relógio-->
+            
+    </form>
+</body>
+
+</html>
