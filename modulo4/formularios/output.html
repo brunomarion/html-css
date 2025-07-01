@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output em Formulários</title>
+</head>
+
+<body>
+    <h1>Formulário de Exemplo</h1>
+    <form action="">
+        <p>
+            <label for="in1">Primeiro número:</label>
+            <input type="number" name="n1" id="in1" min="0" max="100"
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Segundo número:</label>
+            <input type="number" name="n2" id="in2" min="0" max="100"
+                oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <br>
+    <h2>Testando com o range</h2>
+    <form action="">
+        <p>
+            <label for="inum">Número</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5"
+                oninput="numero.innerHTML = Number(inum.value)">
+            <output id="numero">5</output>
+        </p>
+    </form>
+    <h2>Testando com função JavaScript</h2>
+    <form action="">
+        <p>
+            <label for="iano">Digite o ano que você nasceu</label>
+            <input type="number" name="ano" id="iano" min="1930" max="2025" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">0</output>
+        </p>
+    </form>
+    <script>
+        function calcIdade() {
+            const idadeatual = new Date().getFullYear()
+            iidade.innerHTML = Number(idadeatual) - Number(iano.value)
+        }
+    </script>
+
+<!--COMO VOCÊ PODE OBSERVAR "OUTPUTS" NADA MAIS SÃO DO QUE LOCAIS DE SAÍDA DE DADOS, O CONTRARIO DOS INPUTS. PODEMOS USAR ELES PARA MOSTRAR DADOS EM TEMPO REAL AO USUÁRIO POR EXEMPLO, COMO NESSES CASOS USANDO JAVASCRIPT INCLUSIVE, PARA ISSO BASTA DEFINIR UM ID A ELE E COLOCAR O "ONINPUT" NOS CAMPOS DE INPUT, E EXECUTAR A AÇÃO DESEJADA--> 
+
+
+</body>
+
+</html>

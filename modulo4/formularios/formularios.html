@@ -103,6 +103,7 @@
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </p>
+        <br>
 
         <!--input type:"number" aceita somente valores numéricos, com atributos "min" e "max" para limitar os dados preenchidos e o "step" para criar um seletor para aumentar e diminuir o valor digitado pelo quantidade escolhida. Já o "value" é um valor que aparecerá previamente no campo do input (Esse valor substitui o placeholder)-->
 
@@ -111,7 +112,133 @@
         <!--input type: "date" é usado para escolher uma data específica de um calendário (dia-mês-ano)-->
 
         <!--input type: "time" é usado para escolher uma hora específica de um relógio-->
+    </form>
+    <hr>
+    <br>
+    <h2>Mais alguns exemplos de atributos para inputs de formulários:</h2>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset> 
             
+        <!--A tag <fieldset> é uma tag de agrupamento, bastante utilizado para agrupar dados em formulários para maior organização, e a tag <legend> é o título deste agrupamento-->
+
+            <legend><b>Dados Pessoais</b></legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" autocomplete="name" minlength="5" maxlength="30" size="30" required>
+            </p>
+            <p>
+                <label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itelefone">Telefone:</label>
+                <input type="tel" name="telefone" id="itelefone" autocomplete="tel" placeholder="(xx) xxxxx-xxxx" size="10" required> <!--Estudar sobre RegEx (validador de dados)-->
+            </p>
+            <p>
+                <label for="iesportes">Esportes Favoritos:</label><br>
+                <input type="checkbox" name="basquete" id="basquete"><label for="basquete">Basquete</label><br>
+                <input type="checkbox" name="futebol" id="futebol"><label for="futebol">Futebol</label><br>
+                <input type="checkbox" name="natacao" id="natacao"><label for="natacao">Natação</label><br>
+                <input type="checkbox" name="tenis" id="tenis"><label for="tenis">Tênis</label><br>
+                <input type="checkbox" name="voltei" id="volei"><label for="volei">Vôlei</label><br>
+            </p>
+            <p>
+                <label for="iestados">Estado em que você mora:</label>
+                <select name="estados" id="iestados">
+                    <option value="">--- Escolha ---</option>
+                    <optgroup label="Região Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AA">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                    </optgroup>
+                    <optgroup label="Região Centro-Oeste">
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="DF">Distrito Federal</option>
+                    </optgroup>
+                    <optgroup label="Região Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprofissao">Profissão</label>
+                <input type="text" name="profissao" id="iprofissao" list="lista-profissoes">
+                <datalist id="lista-profissoes">
+                    <option value="Professor">Professor</option>
+                    <option value="Fisioterapeuta">Fisioterapeuta</option>
+                    <option value="Motorista">Motorista</option>
+                    <option value="Médico">Médico</option>
+                    <option value="Advogado">Advogado</option>
+                    <option value="Desenvolvedor">Desenvolvedor</option>
+                    <option value="Engenheiro">Engenheiro</option>
+                </datalist>
+                <!--Para linkar a datalist ao input type:"text, usa-se o atributo "list" com o mesmo ID da datalist-->
+            </p>
+
+             <!--A PRINCIPAL DIFERENÇA ENTRE O SELECT E O DATALIST É QUE NO SELECT NÃO CONSEGUIMOS DIGITAR ALGO FORA DO QUE JA FOI ESTABELECIDO, JA NO DATALIST(SUGESTÕES) É POSSÍVEL!-->
+
+
+            <p>
+                <label for="isexo">Sexo:</label><br>
+                <input type="radio" name="sexo" id="masculino" value="M"><label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino" value="F"><label for="feminino">Feminino</label>
+                <input type="radio" name="sexo" id="outro" checked required value="outro"><label for="outro">Prefiro não dizer</label>
+                <!--No caso do "input type:radio" para opções do mesmo grupo, deve-se colocar o "mesmo name" em todos os campos para impedir que selecione mais de uma opção-->
+                <!--É importate colocar o "value" com um valor de referência para saber o que foi enviado, como nesse caso pela URL-->
+
+            </p>
+            <p>
+                <label for="icor">Selecione sua cor preferida:</label>
+                <input type="color" name="cor" id="icor" value="#000000">
+                <!--A cor será mandada em código hexadecimal, nesse caso o "value" é a cor que vai aparecer primariamente-->
+            </p>
+            <p>
+                <label for="inivel">Selecione um nível de satisfação:</label><br>
+                <input type="range" name="nivel" id="inivel" min="0" max="10" value="5">
+                <!--Por padrão o nível vai de 0 a 100, mas é possível alterar isso com "min" e "max", já o "value" vai designar onde a barra vai estar primariamente-->
+
+                <!--ATENÇÃO, MUITO CUIDADO, TALVEZ ALGUNS DESSE INPUTS NÃO FUNCIONEM EM ALGUNS NAVEGADORES-->
+            </p>
+            <p>
+                <label for="ifoto">Anexe em foto sua:</label>
+                <input type="file" name="foto" id="ifoto">
+                <!--ATENÇÃO, AO USAR A TAG "INPUT TYPE: FILE", PARA O ARQUIVO SER ENVIADO REALMENTE DEVE USAR O MÉTODO POST NO FORMULÁRIO.-->
+            </p>
+
+            <p>
+                <label for="imensagem">Mensagem:</label><br>
+                <textarea name="mensagem" id="imensagem" cols="30" rows="10" placeholder="Digite aqui sua mensagem"></textarea>
+                <!--ATENÇÃO, AO USAR A TAG "TEXTAREA", É IDEAL QUE UTILIZE O MÉTODO POST, DEVIDO AO LIMITE DE 3000BITS-->
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
     </form>
 </body>
 
