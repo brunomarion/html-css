@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*ESTILO PARA IMPRESSÃO DA PÁGINA*/
+
+*{
+    margin: 5px;
+    padding: 5px;
+}
+
+html, body{
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.3em;
+    width: 100%;
+}
+
+menu > ul{
+    display: none;
+}
+
+main{
+    margin: auto;
+}
+
+main article p{
+    margin: 20px;
+    text-align: justify;
+}
+
+
+
+

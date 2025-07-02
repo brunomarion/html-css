@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*ESTILO PARA TELAS DA PÁGINA*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    background-color: darkgray;
+}
+
+header h1{
+    text-align: center;
+    padding: 10px;
+}
+
+header menu ul{
+    background-color: rgb(99, 98, 98);
+    list-style-type: none;
+}
+
+header menu ul li{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: rgb(62, 62, 62);
+}
+
+main article{
+    display: block;
+    margin: auto;
+    width: 500px;
+    margin-top: 30px;
+}
