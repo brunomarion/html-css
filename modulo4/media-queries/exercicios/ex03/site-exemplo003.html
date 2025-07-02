@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+         /* ESSA É OUTRA FORMA DE TRABALHAR COM MEDIAS TYPE E ORIENTATION, COLOCANDO TUDO JUNTO EM UM ÚNICO CSS, DIVIDINDO O CSS ESPECÍFICO COM O "@MEDIA SCREEN AND (ORIENTATION: PORTRAIT OU LANDSCAPE)" */
+
+        @charset "UTF-8";
+        /*CONFIGURAÇÕES GERAIS*/
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        html,
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #233eff;
+            color: white;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.616);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        body h1 {
+            text-align: center;
+        }
+
+        /* APARELHO "EM PÉ (PORTRAIT)"*/
+        @media screen and (orientation: portrait) {
+            body {
+                background-image: url(imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+
+        /* APARELHO "DEITADO" (LANDSCAPE) */
+        @media screen and (orientation: landscape) {
+            body {
+                background-image: url(imagens/cev-landscape.jpg);
+                background-position: left bottom;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mude a orientação do seu dispositivo!</h1>
+</body>
+
+</html>
