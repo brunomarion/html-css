@@ -32,3 +32,14 @@ img {
     width: 0px;
     height: 0px;
 }
+
+/*ADICIONANDO JAVASCRIPT*/
+
+body{
+    opacity: 0;
+}
+
+.fade-in{
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
