@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Menu Responsivo</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-queries.css">
+</head>
+
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <span id="menu-icon" class="material-symbols-outlined" onclick="abrirMenu()">menu</span>
+        <menu id="menu-itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis cumque totam necessitatibus quibusdam
+                ea quidem itaque odit laboriosam velit? Aut voluptates quisquam enim sequi sapiente dolore cumque fuga
+                dolorem ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere numquam rem quibusdam
+                tenetur modi laboriosam reprehenderit voluptatem, quaerat tempore libero delectus possimus quia voluptas
+                error porro! Repellat excepturi sint nihil?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quasi facere nemo quia ut eaque
+                consectetur nisi cumque quibusdam itaque. Voluptatem magnam cupiditate voluptas, eligendi similique
+                reiciendis ipsum eum nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo delectus
+                dolorum nulla atque maiores numquam nobis sed sapiente? Soluta inventore voluptas itaque nihil harum
+                vero cumque, similique expedita libero debitis! Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Minima, libero at praesentium repellat distinctio architecto nam aliquam exercitationem recusandae
+                iste doloribus commodi facilis fugit ratione deleniti, suscipit molestias optio deserunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aut ab pariatur voluptatem, reiciendis
+                molestiae eum maiores, blanditiis numquam nihil facere ipsum perferendis voluptate quaerat nulla illo
+                asperiores veritatis exercitationem!</p>
+        </article>
+    </main>
+    <script>
+        function abrirMenu() {
+            const menu = document.getElementById('menu-itens')
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>

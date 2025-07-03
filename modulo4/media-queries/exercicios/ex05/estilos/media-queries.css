@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*COMO FIZEMOS O PROJETO BASEANDO-SE EM MOBILE FIRST, NÃO FOI NECESSÁRIO MODIFICAR ABAIXO DOS 700PX DE MAX-WIDTH*/
+
+
+/*PARA TELAS COM LARGURA ACIMA DE 700PX (TABLETS, POR EXEMPLO)*/
+@media screen and (min-width: 700px){
+    #menu-icon{
+        display: none;
+    }
+
+    #menu-itens{
+        display: block
+    }
+
+    menu > ul > li{
+        display: inline-block;
+    }
+
+    main{
+        width: 780px;
+    }
+
+}
+
+
+/*PARA TELAS COM LARGURA ACIMA DE 1100PX (MONITORES OU TELEVISÕES)*/
+@media screen and (min-width: 1100px){
+    #menu-icon{
+        display: none;
+    }
+
+    #menu-itens{
+        display: block
+    }
+
+    menu ul{
+        text-align: center;
+    }
+
+    menu > ul > li{
+        display: inline-block;
+        margin: 0px 30px;
+    }
+
+    menu > ul > li a{
+        width: 150px;
+    }
+
+    main{
+        width: 780px;
+    }
+}
+
