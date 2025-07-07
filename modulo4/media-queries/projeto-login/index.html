@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="estilos/style.css">
-</head>
+    <link rel="stylesheet" href="estilos/media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <body>
     <main>
-        <div class="login-box">
-            <form action="#" method="get">
-
-            </form>
-        </div>
+        <section class="conteiner-login">
+            <div class="imagem">
+            </div>
+            <div class="formulario">
+                <h1>Login</h1>
+                <p>Seja bem vindo(a) novamente, faça o login para acessar sua conta e poder fazer as configurações no
+                    seu ambiente.</p>
+                <form action="cadastro.php" autocomplete="on">
+                    <div class="campos-formulario">
+                        <div class="campo">
+                            <label for="iemail">
+                                <p class="labelname"><i class="fas fa-envelope"></i> Email:</p>
+                            </label>
+                            <input type="email" name="email" id="iemail" placeholder=" Digite seu email" autocomplete="email">
+                        </div>
+                        <div class="campo">
+                            <label for="isenha">
+                                <p class="labelname"><i class="fas fa-lock"></i> Senha:</p>
+                            </label>
+                            <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" autocomplete="current-password" required minlength="10" maxlength="30">
+                        </div>
+                    </div>
+                    <div class="botoes">
+                        <input class="botao-enviar" type="submit" value="Entrar" required minlength="6" maxlength="15">
+                    </div>
+                    <div class="links-externos">
+                        <div class="link-externo01">
+                            <a href="#">
+                                <p>Esqueci senha</p>
+                            </a>
+                        </div>
+                        <div class="link-externo02">
+                            <a href="#">
+                                <p>Não tem uma conta? Crie aqui!</p>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
+
 </html>

@@ -1,5 +1,111 @@
 @charset "UTF-8";
 
-*:root{
-    --var
+/*CSS PADRÃO (MOBILE FIRST)*/
+
+
+/*CORES DO PROJETO*/
+:root{
+    --cor01: #49a09d;
+    --cor02: #5f2c82; 
 }
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body, main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.conteiner-login{
+    display: flex;
+    flex-direction: column;
+    height: 83vh;
+    width: 80vw;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: whitesmoke;
+    transition: 0.3s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.564);
+    transition-timing-function: ease;
+    transition: 0.3s;
+}
+
+.imagem{
+    background-image: url("../imagens/img-login.jpg");
+    background-position: 40% 20%;
+    background-size: cover;
+    width: 100%;
+    height: 40%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+}
+
+.formulario h1{
+    padding: 10px;
+    font-size: 24px;
+    margin: 0px 20px;
+    border-bottom: 1px solid;
+}
+
+.formulario p{
+    font-size: 12px;
+    margin: 0px 10px;
+}
+
+.formulario .campo{
+    margin: 20px;
+}
+
+.labelname{
+    display: none;
+}
+
+.campo i{
+    display: block;
+}
+
+.campo input{
+    padding: 10px;
+    width: 90%;
+    border-radius: 30px;
+    border: 0px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.263);
+}
+
+.formulario .botao-enviar{
+    cursor: pointer;
+    background-color:#49a09d;
+    padding: 12px;
+    width: 80%;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.184);
+}
+
+.formulario .botao-enviar:hover{
+    background-color: #63dad6;
+    transition: 0.2s ease-in-out;
+}
+
+.formulario .links-externos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+
