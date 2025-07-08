@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div.conteiner{
+            display: flex; /*AO USAR O DISPLAY FLEX NO CONTEINER, OS ELEMENTOS DENTRO DELE (ITEMS) SE TORNARAO FLEXIVEIS AO TAMANHO DO CONTEINER*/
+            background-color: orange;   
+            flex-direction: row; 
+            flex-wrap: wrap;
+            /*EXISTE O SHORTHAND FLEX-FLOW: ROW WRAP*/
+        }
+
+        div.item{
+            text-align: center;
+            background-color: green;
+            border: 1px solid black;
+            flex: auto; /*PREENCHE TODO O CONTEINER*/
+        }
+
+        div.conteiner2{
+            display: flex; 
+            background-color: orange;   
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+
+        div.item2{
+            text-align: center;
+            color: white;
+            background-color: rgb(22, 4, 102);
+            border: 1px solid black;
+        }
+
+        div.conteiner3{
+            display: flex; 
+            height: 200px; /*PARA USAR O ALIGN ITEMS, O CONTEINER PRECISA TER UMA ALTURA PREDEFINIDA*/
+            background-color: rgb(189, 21, 2);   
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.item3{
+            text-align: center;
+            color: white;
+            background-color: rgb(22, 4, 102);
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo tudo sobre FLEXBOX</h1>
+    <h2>Flex Direction e Flex-wrap (Flex-Flow)</h2>
+    <div class="conteiner">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
+    <hr>
+    <h2>Alinhamento nos Eixos (Main-Axis e Cross Axis)</h2>
+    <h3>Justify-Content(Alinha os items no eixo do Main Axis)</h3>
+    <div class="conteiner2">
+        <div class="item2">Exemplo de bloco A</div>
+        <div class="item2">Exemplo de bloco B</div>
+        <div class="item2">Exemplo de bloco C</div>
+    </div>
+    <h3>Align-Items(Alinha os items no eixo do Cross Axis)</h3>
+    <div class="conteiner3">
+        <div class="item3">Exemplo de bloco A</div>
+        <div class="item3">Exemplo de bloco B</div>
+        <div class="item3">Exemplo de bloco C</div>
+    </div>
+</body>
+</html>
