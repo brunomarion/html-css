@@ -40,11 +40,29 @@
             background-color: rgb(189, 21, 2);   
             flex-flow: row nowrap;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         div.item3{
             text-align: center;
+            color: white;
+            background-color: rgb(22, 4, 102);
+            border: 1px solid black;
+        }
+
+         div.conteiner4{
+            display: flex; 
+            flex-flow: row wrap;
+            background-color: yellow;
+            height: 300px;   
+            align-items: center; /*ALINHA OS ITENS NO EIXO TRANSVERSAL*/
+            justify-content: space-around;
+            align-content: space-evenly; /*ALINHA O ESPAÇAMENTO ENTRE ESSES ITENS, QUANDO FOR "QUEBRADO" COM WRAP, WRAP-REVERSE*/
+        }
+
+        div.item4{
+            text-align: center;
+            padding: 30px;
             color: white;
             background-color: rgb(22, 4, 102);
             border: 1px solid black;
@@ -71,11 +89,20 @@
         <div class="item2">Exemplo de bloco B</div>
         <div class="item2">Exemplo de bloco C</div>
     </div>
-    <h3>Align-Items(Alinha os items no eixo do Cross Axis)</h3>
+    <h3>Align-Items (Alinha os items no eixo do Cross Axis)</h3>
     <div class="conteiner3">
         <div class="item3">Exemplo de bloco A</div>
         <div class="item3">Exemplo de bloco B</div>
         <div class="item3">Exemplo de bloco C</div>
+    </div>
+    <h3>Align-Content (Alinha os items no eixo do Cross Axis)</h3>
+    <div class="conteiner4">
+        <div class="item4">Exemplo de bloco A</div>
+        <div class="item4">Exemplo de bloco B</div>
+        <div class="item4">Exemplo de bloco C</div>
+        <div class="item4">Exemplo de bloco D</div>
+        <div class="item4">Exemplo de bloco F</div>
+        <div class="item4">Exemplo de bloco G</div>
     </div>
 </body>
 </html>

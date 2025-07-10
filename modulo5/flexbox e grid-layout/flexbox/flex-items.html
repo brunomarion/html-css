@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Items</title>
+    <style>
+        div.conteiner{
+            display: flex;
+            background-color: gray;   
+            flex-direction: row; 
+            flex-wrap: wrap;
+        }
+
+        div.item{
+            text-align: center;
+            background-color: red;
+            border: 1px solid black;
+            padding: 30px;
+        }
+
+        #i1{
+            order: 1;
+        }
+
+        #i2{
+            order: 0;
+        }
+
+        #i3{
+            order: 3;
+        }
+
+        #i4{
+            order: -1;
+        }
+
+        #i5{
+            order: 0;
+        }
+
+        #i6{
+            order: 6;
+        }
+
+        #i7{
+            order: 8;
+        }
+
+        div.conteiner2{
+            display: flex;
+            height: 300px;
+            background-color: green;   
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+
+        div.item2{
+            color: white;
+            text-align: center;
+            background-color: black;
+            border: 1px solid white;
+            padding: 30px;
+        }
+
+        #ii1{
+            align-self: flex-end;
+        }
+
+        #ii2{
+            align-self: center;
+        }
+
+        #ii3{
+            align-self: auto;
+        }
+
+        #ii4{
+           align-self: flex-end;
+        }
+
+        #ii5{
+            align-self: stretch;
+        }
+
+        #ii6{
+            align-self: center;
+        }
+
+        #ii7{
+            align-self: flex-end;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Aprendendo FLEXBOX (Flex-Items)</h1>
+    <h2>Order</h2>
+    <p>Propriedade que define a ordem dos items dentro do conteiner (order: ORDEM CRESCENTE)</p>
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+    <hr>
+    <h2>Align-Self</h2>
+    <p>Propriedade que define a posição de cada item dentro do conteiner</p>
+    <div class="conteiner2">
+        <div class="item2" id="ii1">A</div>
+        <div class="item2" id="ii2">B</div>
+        <div class="item2" id="ii3">C</div>
+        <div class="item2" id="ii4">D</div>
+        <div class="item2" id="ii5">E</div>
+        <div class="item2" id="ii6">F</div>
+        <div class="item2" id="ii7">G</div>
+    </div>
+</body>
+
+</html>
