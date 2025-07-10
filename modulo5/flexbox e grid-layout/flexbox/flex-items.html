@@ -93,6 +93,54 @@
             align-self: flex-end;
         }
 
+        div.conteiner3{
+            display: flex;
+            background-color: rgba(0, 0, 255, 0.542);   
+            flex-flow: row nowrap;
+            align-items: flex-start;
+        }
+
+        div.item3{
+            color: black;
+            flex-shrink: 1;
+            text-align: center;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        #i01{
+            /*
+
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 200px;
+
+            */
+            flex: 0 0 200px;
+        }
+
+        #i02{
+            /*
+
+            flex-grow: 2; Neste caso o i02 vai crescer, mas em proporção, dobro do i03
+            flex-shrink: 1;  Neste caso o i02 vai encolher, mas em proporção, não tanto quanto o i03 
+            flex-basis: 200px;    
+
+            */
+            flex: 2 1 200px;
+        }
+
+        #i03{
+            /*
+
+            flex-grow: 1; /*Neste caso o i03 vai crescer metade do i02
+            flex-shrink: 2; /*Neste caso o i03 vai encolher, mas em proporção, duas vezes mais que o i02 
+            flex-basis: 200px;   
+
+            */
+            flex: 1 2 200px;
+        }
+
     </style>
 </head>
 
@@ -120,6 +168,28 @@
         <div class="item2" id="ii5">E</div>
         <div class="item2" id="ii6">F</div>
         <div class="item2" id="ii7">G</div>
+    </div>
+    <hr>
+    <h2>Flex-Shrink e Flex-Grow</h2>
+    <p>Propriedade que define se o elemento vai encolher ou crescer, conforme o tamanho do conteiner</p>
+    <p>ATENÇÃO: <br>0 -> define que não vai crescer
+    </p>
+    <p>
+        1-> Define que vai crescer
+    </p>
+    <p>Qualquer numero acima de 1, vai crescer (grow) ou vai diminuir (shrink) na proporção dos outros items</p>
+    <p><strong>Existe o ShortHand: (Flex: flex-grow + flex-shrink + flex-basis)</strong></p>
+    <p><strong>Outros valores para flex bastante utilizados são:</strong></p>
+    <ul>
+        <li><p>Flex: Initial (Flex: 0 1 auto - valores padrões de cada propriedade)</p></li>
+        <li><p>Flex: None (Flex: 0 0 auto) - para o item <strong>nao flexível</strong></p></li>
+        <li><p>Flex: auto (Flex: 1 1 auto) - para um item <strong>totalmente flexível</strong></p></li>
+        <li><p>Flex: 1 / Flex: 2 / Flex: 3 ... (Flex: 1/2/3    1     auto) - muda somente o Grow, o restante fica padrão</p></li>
+    </ul>
+    <div class="conteiner3">
+        <div class="item3" id="i01">A</div>
+        <div class="item3" id="i02">B</div>
+        <div class="item3" id="i03">C</div>
     </div>
 </body>
 
