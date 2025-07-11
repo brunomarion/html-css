@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsisvo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(199, 196, 196);
+        }
+
+        header{
+            background-color: gray;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+
+        header h1{
+            color: white;
+            flex: 0 0 200px;
+            border: 1px dashed black;
+            text-align: center;
+        }
+
+        header nav{
+            display: flex;
+            border: 1px dashed black;
+            flex-flow: row wrap;
+            list-style-type: none;
+        }
+
+        header nav a{
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.773);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.504);
+        }
+
+        header nav a:hover{
+            background-color: white;
+            color: black;
+            transition: 0.2s ease-in-out;
+        }
+
+        @media screen and (max-width: 645px){
+            header{
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            header nav{
+                width: 100%;
+            }
+            
+            
+            header nav a{  
+                width: 100%;
+                text-align: center;
+                margin:5px;
+            }
+
+        }
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Opção 1</a>
+            <a href="#">Opção 2</a>
+            <a href="#">Opção 3</a>
+            <a href="#">Opção 4</a>
+            <a href="#">Opção 5</a>
+            <a href="#">Opção 6</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Teste de FlexBox</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur eos delectus deleniti similique dolore molestiae accusamus debitis natus earum perferendis excepturi ex tempore, ab reprehenderit praesentium ad facere omnis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate aliquid exercitationem est reprehenderit quae placeat, praesentium dolorum, error, expedita quis natus maiores pariatur ullam fugit et possimus ab animi quidem?</p>
+    </main>
+</body>
+</html>
