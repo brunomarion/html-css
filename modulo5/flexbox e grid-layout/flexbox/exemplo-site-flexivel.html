@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Flexivel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 25px;
+        }
+
+        .section-normal {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .media img{
+            width: 500px;
+        }
+
+        .section-flexivel{
+            background-color: lightgray;
+            padding: 20px;
+            text-align: justify;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 20px;
+        }
+
+        .box-media-text{
+            display: flex;
+        }
+
+        .box-text-media{
+            display: flex;
+            flex-flow: row wrap-reverse;
+        }
+
+        .box-media-text{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .text{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            flex: 1 1 500px;
+            padding: 10px;
+        }
+
+        .text h2{
+            text-align: center;
+        }
+
+        .media{
+            display: block;
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="section-normal">
+        <h1>Exemplo de conteúdo flexível</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo in veniam officia, repellat
+            dignissimos repellendus molestiae? Ipsa, vel nostrum, soluta obcaecati porro minus quas aliquam fuga
+            assumenda asperiores at?</p>
+    </section>
+    <section class="section-flexivel">
+        <section class="box-text-media">
+            <div class="text">
+                <h2>Elemento Media -> Text</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, id? Voluptatem ab ad recusandae.
+                    Eaque ad esse vel nostrum distinctio explicabo iure, est laborum minus dolor reprehenderit
+                    exercitationem fugiat rem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis alias
+                    facilis assumenda voluptates odio veniam exercitationem, placeat quidem dolorum ad repellat optio
+                    modi non odit laudantium perspiciatis voluptatibus. Voluptates, hic.</p>
+            </div>
+            <div class="media">
+                <img src="content-exemplo-site-flexivel/img01.png" alt="imagem-cristo-redentor">
+            </div>
+        </section>
+        <section class="box-media-text">
+            <div class="text">
+                <h2>Elemento Text -> Media</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta fugiat, eos repellendus nostrum nam
+                    expedita quos nulla quasi sunt non magni alias impedit, veniam provident. Aspernatur quas sed
+                    voluptatum nesciunt!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, consequatur. Excepturi voluptatem
+                    suscipit necessitatibus enim provident nam veritatis tempora aliquam, illum officia obcaecati
+                    repellendus? Rerum ea quasi eius ipsum minima.</p>
+            </div>
+            <div class="media">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zFypvOxfxFY?si=3edYJMnDtRIJjFFD"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </section>
+    <section class="section-normal">
+        <h2>Conteúdo Normal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis in adipisci aspernatur doloribus,
+            doloremque perspiciatis numquam quaerat, repudiandae sapiente quisquam minima sequi ipsa nobis dolorum iusto
+            consectetur at molestiae veritatis!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi rem facilis distinctio in minima harum, quo
+            debitis, consectetur molestiae corporis, nulla nesciunt! Ducimus explicabo quisquam aut adipisci ipsum non
+            cum.</p>
+    </section>
+</body>
+
+</html>
