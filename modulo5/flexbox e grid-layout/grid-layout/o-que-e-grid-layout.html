@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        div.container{
+            display: grid;
+            height: 250px;
+            border: 3px solid blue;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+        }
+
+        div.item{
+            border: 2px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>O que é um Grid Layout?</h1>
+    <p>É um sistema de criação de Layouts (nterfaces de Usuário), baseado em uma grade bidimensional</p>
+    <p><ins>Propriedades de um GridLayout:</ins></p>
+    <ul>
+        <li>Grid Conteiner: É o conteiner Pai, ele quem engloba todos os grid Items.</li>
+        <li>Grid Item: São todas as junções do Grid, cada encontro entre linhas e colunas.</li>
+        <li>Grid Tracks: Podem ser divididas entre <strong>RowTrack</strong> e <strong>ColumnTrack.</strong></li>
+        <li>Grid Area: Como o nome já diz são um conjunto de Grid Items.</li>
+        <li>Grid-Lines: São as linhas que compõe o Grid-Container, sendo <strong>positivas (para direita e para baixo)</strong> e <strong>negativas (para esquerda e para cima).</strong></li>
+    </ul>
+    <br>
+    <p><ins>Propriedades de um Grid Container:</ins></p>
+    <ul>
+        <li><strong>Display: Grid;</strong> (Transforma este elemento em um container do tipo Grid, desbloqueando todas as propriedades de um grid container).</li>
+        <li><strong>Grid-Tamplate-Columns</strong>: auto auto auto (define o tamanho das colunas do grid. AUTO siginifica que vai preencher todo o espaço igualmente).</li>
+        <li><strong>Grid-Tamplate-Rows:</strong> 100px 100px 100px (define o tamanho das linhas do grid. AUTO siginifica que vai preencher todo o espaço igualmente).</li>
+        <li><strong>Grid-Gap:</strong> 20px (espaçamento entre os gridItems). </li>
+    </ul>
+    <br>
+    <p><ins>Grid Layout na prática:</ins></p>
+    <p>Uma ótima ferramenta para criação de grids é o grid-view do inspecionar do navegador.</p>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+
+</html>
