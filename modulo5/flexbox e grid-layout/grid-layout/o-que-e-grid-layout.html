@@ -8,16 +8,29 @@
     <style>
         div.container{
             display: grid;
-            height: 250px;
-            border: 3px solid blue;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto auto auto;
+            border: 5px solid blue;
+            grid-template: repeat(3, 80px) / 100px 50% 1fr;;
+            /*grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;*/
+
             gap: 20px;
+            place-items: normal normal;
+            place-content: normal normal;
+            /*align-items: center; 
+            justify-items: center; 
+            align-content: space-evenly; 
+            justify-content: space-around;*/
+
+            /*Essa propriedade define a orientação do Grid ao adicionar itens, se vai ser linha (padrão) ou coluna.
+            grid-auto-flow: row/column;*/
+
+            grid-auto-rows: 1fr; /*O item J agora tem o mesmo tamanho dos demais com essa configuração*/
         }
 
         div.item{
-            border: 2px solid red;
-            padding: 5px;
+            border: 2px solid rgb(9, 2, 2);
+            padding: 20px;
+            background-color: red;
         }
     </style>
 </head>
@@ -37,12 +50,25 @@
     <p><ins>Propriedades de um Grid Container:</ins></p>
     <ul>
         <li><strong>Display: Grid;</strong> (Transforma este elemento em um container do tipo Grid, desbloqueando todas as propriedades de um grid container).</li>
-        <li><strong>Grid-Tamplate-Columns</strong>: auto auto auto (define o tamanho das colunas do grid. AUTO siginifica que vai preencher todo o espaço igualmente).</li>
-        <li><strong>Grid-Tamplate-Rows:</strong> 100px 100px 100px (define o tamanho das linhas do grid. AUTO siginifica que vai preencher todo o espaço igualmente).</li>
+        <li><strong>Grid-Tamplate-Columns</strong>: auto auto auto (define o tamanho das colunas do grid. AUTO siginifica que vai preencher todo o espaço igualmente). <strong>Pode-se usar a função Repeat().</strong></li>
+        <li><strong>Grid-Tamplate-Rows:</strong> 100px 100px 100px (define o tamanho das linhas do grid. AUTO siginifica que vai preencher todo o espaço igualmente). <strong>Pode-se usar a função Repeat().</strong></li>
         <li><strong>Grid-Gap:</strong> 20px (espaçamento entre os gridItems). </li>
+        <li><strong>Align-Items:</strong>Alinha os items <strong>verticalmente</strong> individualmente, dentro de suas grades. Podem ser: <strong>Stretch</strong> (Padrão) / <strong>Start</strong> (Alinha no Começo do Item) / <strong>Center</strong> (Alinha no centro do Item) / <strong>End</strong> (Alinha no Final do Item)</li>
+        <li><strong>Justify-Items:</strong>Alinha os items individualmente <strong>horizontalmente</strong>,  dentro de suas grades. Podem ser: <strong>Stretch</strong> (Padrão) / <strong>Start</strong> (Alinha no Começo do Item) / <strong>Center</strong> (Alinha no centro do Item) / <strong>End</strong> (Alinha no Final do Item)</li>
+        <li><strong>Align-Content:</strong>Alinha a posição do <strong> conteúdo inteiro (conjunto de items) verticalmente</strong>,  dentro do container. Podem ser: <strong>Stretch</strong> (Padrão) / <strong>Start</strong> (Alinha no Começo do Container) / <strong>Center</strong> (Alinha no centro do Container) / <strong>End</strong> (Alinha no Final do Container) /<strong>Space-Between </strong>/ <strong>Space-Around</strong> / <strong>Space-Evenly</strong>.</li>
+        <li><strong>Justify-Content:</strong>Alinha a posição do <strong> conteúdo inteiro (conjunto de items) horizontalmente</strong>,  dentro do container. Podem ser: <strong>Stretch</strong> (Padrão) / <strong>Start</strong> (Alinha no Começo do Container) / <strong>Center</strong> (Alinha no centro do Container) / <strong>End</strong> (Alinha no Final do Container) /<strong>Space-Between</strong> / <strong>Space-Around </strong>/ <strong>Space-Evenly.</strong></li>
+        <li><strong>Grid-Auto-Row / Grid-Auto-Column:</strong> Alinhar um novo conteudo adicionado ao grid com o tamanho definido.</li>
     </ul>
     <br>
-    <p><ins>Grid Layout na prática:</ins></p>
+    <p><ins>Short-Hands propriedades Grid-Conteiner:</ins></p>
+    <ul>
+        <li><strong>Grid-Tamplate:</strong> Grid-Tamplate-Rows <strong>/</strong> Grid-Tamplate-Columns. <strong>Com função Repeat(quantidade de repetição, tamanho): Grid-Tamplate: repeat(3, 100px) / repeat(3, auto)</strong></li>
+        <li><strong>Place-Items:</strong> Align-Items Justify-Items</li>
+        <li><strong>Place-Content:</strong> Align-Content Justify-Content</li>
+    </ul>
+    <br>
+    <hr>
+    <p><ins>Grid Layout na prática (TESTE AS PROPRIEDADES ABAIXO):</ins></p>
     <p>Uma ótima ferramenta para criação de grids é o grid-view do inspecionar do navegador.</p>
     <div class="container">
         <div class="item">A</div>
@@ -52,6 +78,9 @@
         <div class="item">E</div>
         <div class="item">F</div>
         <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
     </div>
 </body>
 
