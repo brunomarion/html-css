@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Itens</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template: repeat(5, 100px) / repeat(4, 1fr); /*Define o tamanho do GRID, neste caso com 4 GRID-LINES-ROW(3 ROWS) e 5 GRID-LINES-COLUMNS (4 COLUMNS)*/
+            border: 5px solid black;
+            padding: 2px;
+        }
+
+        .item1{
+            background-color: red;
+            grid-area: 1 / 1 / 2 / 5;
+            /*
+            grid-row-start: 1
+            grid-row-end: 2;
+
+            SHORTHAND:
+            grid-row: 1 / 2;
+            */
+
+
+            /*
+            grid-column-start: 1
+            grid-column-end: 5;
+
+            SHORTHAND:
+            grid-column: 1 / 5;
+            */
+        }
+
+        .item2{
+            background-color: green;
+            grid-area: 2 / 1 / 4 / 3;
+            /*
+            grid-row-start: 2
+            grid-row-end: 4;
+
+            SHORTHAND:
+            grid-row: 2 / 4;
+            */
+
+
+            /*
+            grid-column-start: 1
+            grid-column-end: 3;
+
+            SHORTHAND:
+            grid-column: 1 / 3;
+            */
+        }
+
+        .item3{
+            background-color: blue;
+            grid-area: 2 / 3 / 4 / -1;
+            /*Nesse caso usou-se o -1 para referir à última grid-line, assim como o (-2 = penúltima) ou o (-3 = anti-penúltima)*/
+        }
+
+        .item4{
+            background-color: brown;
+            grid-area: 4 / 1 / 5 / 3;
+        }
+
+        .item5{
+            background-color: yellow;
+            grid-area: 5 / 1 / 6 / span 2;
+            /*Neste caso utilizei o span, indicando que o grid area vai ocupar 2 colunas, também funciona*/
+        }
+
+        .item6{
+            background-color: purple;
+            grid-area: 4 / 3 / span 2 / -1;
+            /*Neste caso utilizei o span, indicando que o grid area vai expandir 2 linhas*/
+            /*-1 = ÚLTIMA GRID-LINE*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedades de Items em um Grid-Layout</h1>
+    <h2>O que são Grid-Areas?</h2>
+    <p>São conjunto de grid items em um tamanho específico. Para definir-mos o tamanho das grid-areas, usamos 4 propridades:</p>
+    <p>
+        <ul>
+            <li><strong>Grid-Row-Start:</strong>Define em qual grid-line-row <strong>começa</strong> o grid-area.</li>
+            <li><strong>Grid-Row-End:</strong>Define em qual grid-line-row <strong>termina</strong> o grid-area.</li>
+            <li><strong>Grid-Column-Start:</strong>Define em qual grid-line-column <strong>começa</strong> o grid-area.</li>
+            <li><strong>Grid-Column-End:</strong>Define em qual grid-line-row <strong>termina</strong> o grid-area.</li>
+        </ul>
+    </p>
+    <p><ins>Existem os Shorthands:</ins></p>
+    <p>
+        <ul>
+            <li><strong>Grid-Row:</strong> Grid-Row-Start / Grid-Row-End</li>
+            <li><strong>Grid-Column:</strong>Grid-Column-Start / Grid-Column-End</li>
+            <li><strong>Também existe o <ins>Grid-Area: Grid-Row-Start / Grid-Column-Start / Grid-Row-End / Grid-Column-End</ins> vai reunir tudo isso em uma só propriedade</strong></li>
+        </ul>
+    </p>
+    <p><em>ATENÇÃO: Também usa-se o span para informar a expansão do grid-area em vez de delimitar o grid-end.</em></p>
+    <br>
+    <p style="color: red;">Na prática, imagine como se tivessemos desenhando um retângulo na tela em um software de desenho, delimitando seu tamanho.<strong>Dica:  Utilize o Inspecionar para verificar as Grid-Lines</strong></p>
+    <p>Abaixo segue um exemplo:</p>
+    <div class="container">
+        <div class="item1">Box 01</div>
+        <div class="item2">Box 02</div>
+        <div class="item3">Box 03</div>
+        <div class="item4">Box 04</div>
+        <div class="item5">Box 05</div>
+        <div class="item6">Box 06</div>
+    </div>
+</body>
+</html>
